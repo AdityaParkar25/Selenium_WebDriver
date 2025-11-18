@@ -1,0 +1,35 @@
+package WebDriverDemos;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+		//create an object of WebDriver
+		// interfaceClassName objectName = new ClassName();
+		//webdriver driver/nint/sel = new chromeDriver();
+		//second way of creating driver object
+		//ChromeDriver driver1 = new ChromeDriver();// open chrome browser
+		//driver = new FirefoxDriver(); // open firefox browser
+		//driver = new SafariDriver();
+		// ctrl + shift + o at the end of the line with error to import libraries.
+
+public class SA_01_LaunchBrowser {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		// One way of creating driver object
+		WebDriver driver = new ChromeDriver();
+		
+		//To maximize the browser
+		driver.manage().window().maximize();
+		
+		// to launch the URL over browser : get() method
+		driver.get("https://www.google.com");
+		
+		Thread.sleep(2000);
+		
+		// to close the browser : close() Method
+		driver.close();
+
+	}
+
+}
